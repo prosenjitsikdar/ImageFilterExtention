@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#imageContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    grid-gap: 20px;
+}
+#imageContainer div{
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+#imageContainer img{
+    width: 100%;
+}
+#imageContainer button{
+    background: #F44336;
+    padding: 5px 10px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid #0e0100;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    cursor: pointer;
+}
+
+
+
+
+.imageLink{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+.imageLink > div{
+    width: 49%;
+}
+.imageLink textarea, #imageLinksContainer{
+    width: 100%;
+    border: 2px solid #e3e3e3;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: auto;
+    height: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.imageLink button, .popup button{
+    background: #4CAF50;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #4ba34b;
+    margin: 15px 0 0;
+    cursor: pointer;
+}
+.popup{
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+}
