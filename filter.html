@@ -7,21 +7,30 @@
     <div class="wrapper">
         <div class="imageLink">
             <div>
+                <h4>Paste Image Links</h4>
                 <textarea id="imageLinks" placeholder="Enter image links, one per line"></textarea>
-                <button id="showImagesButton">Show Images</button>
+                <div class="imagebtn">
+                    <button id="showImagesButton">Show Images</button>
+                    <div id="lineCountContainer">Total Links: 0</div>
+                </div>
             </div>
             <div>
+                <h4>Filterd Image Links</h4>
                 <div id="imageLinksContainer"></div>
-                <button id="copytext">Copy Image Url</button>
+                <div class="imagebtn">
+                    <button id="copytext">Copy Image Url</button>
+                    <div id="linkCountContainer">Total Links: 0</div>
+                </div>
             </div> 
             
         </div>
-        
-        
+        <div id="brokenLinksContainer"></div>
         <div id="imageContainer"></div>
+        <div id="loader" class="loader"></div>
         
-        <script src="popup.js"></script>
-        <script src="copytext.js"></script>
+        <script src="js/imageFilter.js"></script>
+        <script src="js/copytext.js"></script>
+        <script src="js/brokenlink.js"></script>
     </div>
 </body>
 </html>

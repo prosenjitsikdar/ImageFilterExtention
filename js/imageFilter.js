@@ -3,6 +3,7 @@ const imageLinksTextarea = document.getElementById('imageLinks');
 const showImagesButton = document.getElementById('showImagesButton');
 const imageContainer = document.getElementById('imageContainer');
 const imageLinksContainer = document.getElementById('imageLinksContainer');
+const loader = document.getElementById('loader'); // Add this line
 
 // Function to remove an image and its container
 function removeImage(imageElement) {
@@ -20,6 +21,9 @@ showImagesButton.addEventListener('click', () => {
   // Clear existing images and links
   imageContainer.innerHTML = '';
   imageLinksContainer.innerHTML = '';
+
+  // Show the loader while images are loading
+  loader.style.display = 'block'; // Add this line
 
   // Split the textarea content by lines and iterate over each line
   const links = imageLinksTextarea.value.split('\n');
@@ -84,6 +88,9 @@ showImagesButton.addEventListener('click', () => {
             imageLinksContainer.appendChild(linkElement);
           }
         });
+
+        // Hide the loader after all images are loaded
+        loader.style.display = 'none'; // Add this line
       }
     };
   });
